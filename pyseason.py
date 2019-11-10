@@ -245,7 +245,7 @@ def process_weather_df(df):
     return df
 
 def load_weather():
-    df = pd.read_csv('./weather.csv')
+    df = pd.read_csv('./weather/us_states.csv')
     df = process_weather_df(df)
     df['State Code'] = df.State.map(util.US_STATES_CODES)
     return df
@@ -372,3 +372,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
